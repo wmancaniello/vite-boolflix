@@ -1,5 +1,5 @@
 <script>
-import { store } from "../store";
+import { store } from "../store.js";
 export default {
   data() {
     return {
@@ -12,4 +12,6 @@ export default {
 
 <template></template>
 
-<style></style>
+<style lang="scss" scoped>
+
+</style>
