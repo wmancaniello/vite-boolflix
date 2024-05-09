@@ -29,8 +29,9 @@ export default {
           params: paramsobj,
         })
         .then((resp) => {
-          // Aggiorno la lista delle SERIE TV nello store con i risultati della ricerca
+          // Aggiorno la lista delle SERIE TV nello store con i risultati della ricerca (dovrei)
           this.store.serieList = resp.data.results;
+          console.log("Stampa SerieTV", this.store.serieList);
         });
 
       // Chiamata per i FILM
@@ -39,8 +40,9 @@ export default {
           params: paramsobj,
         })
         .then((resp) => {
-          // Aggiorno la lista dei FILM nello store con i risultati della ricerca
+          // Aggiorno la lista dei FILM nello store con i risultati della ricerca (dovrei)
           this.store.filmList = resp.data.results;
+          console.log("Stampa FILM", this.store.filmList);
         });
     },
   },
@@ -48,7 +50,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @searcher="searcher" />
 </template>
 
 <style lang="scss"></style>

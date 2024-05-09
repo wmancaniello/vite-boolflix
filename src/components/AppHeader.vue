@@ -43,6 +43,7 @@ export default {
         <form class="form-inline my-2 my-lg-0 d-flex gap-2">
           <input
             class="form-control mr-sm-2"
+            id="searcher"
             type="text"
             placeholder="Cerca"
             aria-label="Cerca"
