@@ -51,6 +51,7 @@ export default {
 
 <template>
   <AppHeader @searcher="searcher" />
+  <AppMain />
 </template>
 
 <style lang="scss"></style>
