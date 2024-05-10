@@ -14,14 +14,30 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <h1 class="text-center">Risultati:</h1>
-    <div class="row row-cols-4">
-      <div class="col">
-        <AppCards />
+  <main>
+
+    <!-- Film -->
+    <div>
+      <h2>Film:</h2>
+      <div v-for="movie in store.filmList" :key="movie">
+        <AppCards :cardObj="movie" />
       </div>
     </div>
-  </div>
+
+    <!-- SerieTV -->
+    <section>
+        <h2>Serie TV:</h2>
+        <div v-for="tv in store.serieList" :key="tv">
+            <AppCards :cardObj="tv" />
+        </div>
+    </section>
+  </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+h2 {
+    color: red;
+}
+
+</style>
