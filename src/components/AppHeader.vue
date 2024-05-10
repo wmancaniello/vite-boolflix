@@ -52,7 +52,7 @@ export default {
           <button
             class="btn btn-outline-success my-2 my-sm-0"
             type="submit"
-            @click="$emit('searcher')"
+            @click="$emit('getData')"
           >
             Cerca
           </button>
