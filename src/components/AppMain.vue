@@ -15,29 +15,26 @@ export default {
 
 <template>
   <main>
-
     <!-- Film -->
-    <div>
-      <h2>Film:</h2>
-      <div v-for="movie in store.filmList" :key="movie">
+    <h1>Film:</h1>
+    <div class="row row-cols-4">
+      <div v-for="movie in store.filmList" :key="movie" class="col">
         <AppCards :cardObj="movie" />
       </div>
     </div>
 
     <!-- SerieTV -->
-    <section>
-        <h2>Serie TV:</h2>
-        <div v-for="tv in store.serieList" :key="tv">
-            <AppCards :cardObj="tv" />
-        </div>
-    </section>
+    <h1>Serie TV:</h1>
+    <div class="row row-cols-4">
+      <div v-for="tv in store.serieList" :key="tv" class="col">
+        <AppCards :cardObj="tv" />
+      </div>
+    </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-
-h2 {
-    color: red;
+h1 {
+  color: red;
 }
-
 </style>
