@@ -66,8 +66,8 @@ export default {
     border-radius: 2rem;
     position: absolute;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a1a, #333333);
-    color: #ffffff;
+    background: white;
+    color: black;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 
@@ -77,6 +77,7 @@ export default {
   }
 
   .front {
+    background-color: #555555;
     img {
       border-radius: 2rem;
     }
