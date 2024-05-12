@@ -40,23 +40,25 @@ export default {
             <a class="nav-link" href="#">Serie TV</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 d-flex gap-2">
-          <input
-            class="form-control mr-sm-2"
-            id="searcher"
-            type="text"
-            placeholder="Cerca"
-            aria-label="Cerca"
-            v-model="store.query"
-          />
-          <button
-            class="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-            @click="$emit('getData')"
-          >
-            Cerca
-          </button>
-        </form>
+        <div class="">
+          <form class="form-inline my-2 my-lg-0 d-flex gap-2">
+            <input
+              class="form-control mr-sm-2"
+              id="searcher"
+              type="text"
+              placeholder="Cerca"
+              aria-label="Cerca"
+              v-model="store.query"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+              @click="$emit('getData')"
+            >
+              Cerca
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>

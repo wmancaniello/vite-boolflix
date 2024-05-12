@@ -18,8 +18,11 @@ export default {
         : "src/assets/img/Icona-Cristo.jpg";
     },
     getOverview() {
-      return this.cardObj.overview
-    }
+      return this.cardObj.overview;
+    },
+    getLanguageFlag() {
+      return "src/assets/img/flag/" + this.cardObj.original_language + ".png";
+    },
   },
 };
 </script>
@@ -29,7 +32,7 @@ export default {
     <!-- Front Card -->
     <div class="card">
       <div class="front">
-        <img :src="getPoster" :alt="cardTitle" />
+        <img class="flag" :src="getPoster" :alt="cardTitle" />
       </div>
       <!-- /Front Card -->
 
@@ -37,9 +40,11 @@ export default {
       <div class="back">
         <h4>Titolo: {{ cardTitle }}</h4>
         <p>Titolo Originale {{ cardOriginalName }}</p>
-        <p>Lingua Originale: {{ cardObj.original_language }}</p>
+        <p>
+          Lingua Originale: <img class="flag" :src="getLanguageFlag" alt="" />
+        </p>
         <p>Voto: {{ cardObj.vote_average }}</p>
-        <p>Overview: {{ getOverview }} </p>
+        <p>Overview: {{ getOverview }}</p>
       </div>
       <!-- /Back Card -->
     </div>
@@ -65,6 +70,10 @@ export default {
     color: #ffffff;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+
+    .flag {
+      max-width: 36px;
+    }
   }
 
   .front {
