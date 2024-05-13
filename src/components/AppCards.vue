@@ -23,6 +23,9 @@ export default {
     getLanguageFlag() {
       return "src/assets/img/flag/" + this.cardObj.original_language + ".png";
     },
+    avgVote() {
+      return Math.round(this.cardObj.vote_average / 2);
+    },
   },
 };
 </script>
@@ -43,7 +46,15 @@ export default {
         <p>
           Lingua Originale: <img class="flag" :src="getLanguageFlag" alt="" />
         </p>
+
         <p>Voto: {{ cardObj.vote_average }}</p>
+        <p>{{ avgVote }}</p>
+        <i
+          v-for="num in 5"
+          class="fa-star"
+          :class="num <= avgVote ? 'fa-solid' : 'fa-regular'"
+        ></i>
+
         <p>Overview: {{ getOverview }}</p>
       </div>
       <!-- /Back Card -->
