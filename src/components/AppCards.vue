@@ -47,13 +47,15 @@ export default {
           Lingua Originale: <img class="flag" :src="getLanguageFlag" alt="" />
         </p>
 
-        <p>Voto: {{ cardObj.vote_average }}</p>
-        <p>{{ avgVote }}</p>
-        <i
-          v-for="num in 5"
-          class="fa-star"
-          :class="num <= avgVote ? 'fa-solid' : 'fa-regular'"
-        ></i>
+        <p>
+          Voto:
+          <i
+            v-for="num in 5"
+            :key="num"
+            class="fa-star"
+            :class="num <= avgVote ? 'fa-solid' : 'fa-regular'"
+          ></i>
+        </p>
 
         <p>Overview: {{ getOverview }}</p>
       </div>
@@ -86,12 +88,12 @@ export default {
       max-width: 36px;
     }
   }
+}
 
-  .front {
-    background-color: #555555;
-    img {
-      border-radius: 2rem;
-    }
+.front {
+  background-color: #555555;
+  img {
+    border-radius: 2rem;
   }
 }
 
